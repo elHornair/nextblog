@@ -18,6 +18,11 @@ export default function Post({
         <Layout>
             <Head>
                 <title>{postData.title}</title>
+                <meta
+                    name="description"
+                    content={postData.description}
+                    key="desc"
+                />
             </Head>
             <article>
                 <h1 className={utilStyles.headingXl}>{postData.title}</h1>
