@@ -12,6 +12,7 @@ export default function Post({
         title: string
         date: string
         contentHtml: string
+        description: string
     }
 }) {
     return (
