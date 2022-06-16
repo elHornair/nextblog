@@ -12,7 +12,7 @@ export default function Home() {
       <main>
         <h1 className="title">
           Read{' '}
-          <Link href='posts/first-post'>my first post</Link>
+          <Link href='/posts/first-post'>my first post</Link>
         </h1>
 
         <p className="description">
