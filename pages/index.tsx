@@ -4,6 +4,8 @@ import Date from '../components/date';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import Image from 'next/image';
+import React from 'react';
 
 export async function getStaticProps () {
     return {
@@ -15,28 +17,54 @@ export async function getStaticProps () {
 
 export default function Home ({ allPostsData }) {
     return (
-        <Layout home>
+        <Layout>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={utilStyles.headingMd}>
-                <p>Hi, my name is Hugo!</p>
-                <p>
-            (This is a sample website - you’ll be building a site like this on{' '}
-                    <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-                </p>
+            <section className="relative bg-gray-800">
+                <div className={utilStyles.contentContainer}>
+                    <div className="py-10 px-4 sm:pt-12 sm:px-6 md:pt-16 lg:w-1/2 lg:mx-0 lg:pt-20 lg:px-8 lg:pr-16 xl:pt-28">
+                        <div className="sm:text-center lg:text-left">
+                            <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                                <span className="sm:block">Let&apos;s go cycling </span>{' '}
+                                <span className="text-indigo-400 sm:block">instead</span>
+                            </h1>
+                            <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                            This blog is all about bikepacking, bicycle travelling and all the <span className="line-through">pain</span> fun that comes with it.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="relative h-36 lg:h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:-mt-24 lg:w-1/2">
+                        <svg
+                            className="hidden lg:block absolute z-10 left-0 inset-y-0 h-full w-48 text-gray-800 transform -translate-x-1/2"
+                            fill="currentColor"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                        >
+                            <polygon points="50,0 100,0 50,100 0,100" />
+                        </svg>
+                        <Image
+                            priority
+                            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+                            src="/images/hero.jpg"
+                            layout="fill"
+                            alt='Bikepacking bicycle in nature.'
+                        />
+                    </div>
+                </div>
             </section>
 
-            <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
+            <section>
+                <h2>From the blog</h2>
+                <ul>
                     {allPostsData.map(({ id, date, title }) => (
-                        <li className={utilStyles.listItem} key={id}>
+                        <li key={id}>
                             <Link href={`/posts/${id}`}>
                                 <a>{title}</a>
                             </Link>
                             <br />
-                            <small className={utilStyles.lightText}>
+                            <small>
                                 <Date dateString={date} />
                             </small>
                         </li>
