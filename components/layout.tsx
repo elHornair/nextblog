@@ -116,11 +116,9 @@ export default function Layout ({ children }: {
                         </Popover>
                     </div>
                 </header>
-
                 <main>
                     {children}
                 </main>
-
             </div>
         </div>
     );
