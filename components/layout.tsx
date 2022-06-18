@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
@@ -41,14 +42,16 @@ export default function Layout ({ children }: {
                                 <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                                     <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                         <div className="flex items-center justify-between w-full md:w-auto">
-                                            <a href="#">
-                                                <span className="sr-only">Workflow</span>
-                                                <img
-                                                    alt="Workflow"
-                                                    className="h-8 w-auto sm:h-10"
-                                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                                />
-                                            </a>
+                                            <Link href="/">
+                                                <a>
+                                                    <span className="sr-only">Workflow</span>
+                                                    <img
+                                                        alt="Workflow"
+                                                        className="h-8 w-auto sm:h-10"
+                                                        src="https://tailwindui.com/img/logos/workflow-mark-orange-500.svg"
+                                                    />
+                                                </a>
+                                            </Link>
                                             <div className="-mr-2 flex items-center md:hidden">
                                                 <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                                                     <span className="sr-only">Open main menu</span>
@@ -85,12 +88,12 @@ export default function Layout ({ children }: {
                                             <div>
                                                 <img
                                                     className="h-8 w-auto"
-                                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                                                    src="https://tailwindui.com/img/logos/workflow-mark-orange-500.svg"
                                                     alt=""
                                                 />
                                             </div>
                                             <div className="-mr-2">
-                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
                                                     <span className="sr-only">Close main menu</span>
                                                     <XIcon className="h-6 w-6" aria-hidden="true" />
                                                 </Popover.Button>

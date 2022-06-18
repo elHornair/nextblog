@@ -27,7 +27,7 @@ export default function Home ({ allPostsData }) {
                         <div className="sm:text-center lg:text-left">
                             <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
                                 <span className="sm:block">Let&apos;s go cycling </span>{' '}
-                                <span className="text-indigo-400 sm:block">instead</span>
+                                <span className="text-orange-400 sm:block">instead</span>
                             </h1>
                             <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                             This blog is all about bikepacking, bicycle travelling and all the <span className="line-through">pain</span> fun that comes with it.
