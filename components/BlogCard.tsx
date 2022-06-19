@@ -8,12 +8,21 @@ export default function BlogCard ({
     title,
     description,
     imageUrl,
+    imageAlt,
     date,
     tags
 }) {
     return <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div className="flex-shrink-0">
-            <img className="h-48 w-full object-cover" src={imageUrl} alt="TODO"/>
+            <div className="relative h-48 w-full object-cover overflow-hidden">
+                <Image
+                    src={imageUrl}
+                    layout="responsive"
+                    width={7200}// TODO: adapt image ratio so it's what the layout actually expects (wide). Then always cut the original images correctly.
+                    height={4800}
+                    alt={imageAlt}
+                />
+            </div>
         </div>
         <div className="flex-1 bg-white p-6 flex flex-col justify-between">
             <div className="flex-1">
@@ -33,7 +42,6 @@ export default function BlogCard ({
                         <a className="block relative h-10 w-10 rounded-full overflow-hidden">
                             <span className="sr-only">Alain</span>
                             <Image
-                                priority
                                 src="/images/profile.jpg"
                                 layout="fill"
                                 alt="Male face wearing sunglasses and bicyle helmet in the foreground, road in the background."

@@ -23,6 +23,7 @@ export function getSortedPostsData () {
         // Combine the data with the id
         return {
             id,
+            imageUrl: `/images/${id}/main.jpg`,
             ...(matterResult.data as { date: string; title: string, description: string })
         };
     });
@@ -47,6 +48,7 @@ export function getAllPostIds () {
     });
 }
 
+// TODO: refactor this, so it shares the common code with getSortedPostsData() (helper function that turns a path into a blog info object
 export async function getPostData (id: string) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -64,6 +66,7 @@ export async function getPostData (id: string) {
     return {
         id,
         contentHtml,
+        imageUrl: `/images/${id}/main.jpg`,
         ...(matterResult.data as { date: string; title: string, description: string })
     };
 }

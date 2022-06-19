@@ -23,6 +23,7 @@ export default function PostsSection ({ allPosts }) {
                             title={post.title}
                             description={post.description}
                             imageUrl={post.imageUrl}
+                            imageAlt={post.imageAlt}
                             date={post.date}
                             tags={post.tags}
                         />
