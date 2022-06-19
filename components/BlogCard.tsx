@@ -7,7 +7,8 @@ export default function BlogCard ({
     title,
     description,
     imageUrl,
-    date
+    date,
+    tags
 }) {
     return <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div className="flex-shrink-0">
@@ -16,7 +17,7 @@ export default function BlogCard ({
         <div className="flex-1 bg-white p-6 flex flex-col justify-between">
             <div className="flex-1">
                 <p className="text-sm font-medium text-orange-600">
-                    <span>Mexico</span>
+                    <span>{tags}</span>
                 </p>
                 <Link href={`/posts/${id}`} className="block mt-2">
                     <a>

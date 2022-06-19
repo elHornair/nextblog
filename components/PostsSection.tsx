@@ -24,6 +24,7 @@ export default function PostsSection ({ allPosts }) {
                             description={post.description}
                             imageUrl={post.imageUrl}
                             date={post.date}
+                            tags={post.tags}
                         />
                     ))}
                 </div>
