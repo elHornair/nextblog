@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Date from './date';
+import Image from 'next/image';
 
 export default function BlogCard ({
     id,
@@ -29,9 +30,14 @@ export default function BlogCard ({
             <div className="mt-6 flex items-center">
                 <div className="flex-shrink-0">
                     <Link href={'/about'}>
-                        <a >
+                        <a className="block relative h-10 w-10 rounded-full overflow-hidden">
                             <span className="sr-only">Alain</span>
-                            <img className="h-10 w-10 rounded-full" src="/" alt="Profile picture of Alain"/>
+                            <Image
+                                priority
+                                src="/images/profile.jpg"
+                                layout="fill"
+                                alt="Male face wearing sunglasses and bicyle helmet in the foreground, road in the background."
+                            />
                         </a>
                     </Link>
                 </div>
