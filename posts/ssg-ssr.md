@@ -1,5 +1,6 @@
 ---
-title: 'When to Use Static Generation v.s. Server-side Rendering'
+title1: 'When to Use Static Generation'
+title2: 'v.s. Server-side Rendering'
 date: '2020-01-02'
 description: 'Although the letters are almost the same, the concept is quite different.'
 tags: 'mexico'

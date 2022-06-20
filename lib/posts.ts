@@ -24,7 +24,8 @@ export function getSortedPostsData () {
         return {
             id,
             imageUrl: `/images/${id}/main.jpg`,
-            ...(matterResult.data as { date: string; title: string, description: string, imageUrl: string, tags: string })
+            title: `${matterResult.data.title1} ${matterResult.data.title2}`,
+            ...(matterResult.data as { date: string, title1: string, title2: string, description: string, imageUrl: string, tags: string })
         };
     });
     // Sort posts by date
@@ -67,6 +68,7 @@ export async function getPostData (id: string) {
         id,
         contentHtml,
         imageUrl: `/images/${id}/main.jpg`,
-        ...(matterResult.data as { date: string; title: string, description: string, imageUrl: string, tags: string })
+        title: `${matterResult.data.title1} ${matterResult.data.title2}`,
+        ...(matterResult.data as { date: string, title1: string, title2: string, description: string, imageUrl: string, tags: string })
     };
 }

@@ -12,6 +12,8 @@ export default function Post ({
     postData: {
         id,
         title,
+        title1,
+        title2,
         description,
         imageUrl,
         imageAlt,
@@ -53,8 +55,8 @@ export default function Post ({
                                 md:text-6xl
                             "
                             >
-                                <span className="block xl:inline">{title}</span>
-                                <span className="block text-orange-600 xl:inline">{title}</span>
+                                <span className="block xl:inline">{title1}</span>{' '}
+                                <span className="block text-orange-600 xl:inline">{title2}</span>
                             </h1>
                             <p
                                 className="
