@@ -37,7 +37,7 @@ export default function Post ({
                     <nav className="mt-4 mb-8 sm:mt-6 sm:mb-12 md:mt-8 md:mb-16">
                         <Link href="/"><a className={utilStyles.contentLink}>Home</a></Link>
                         {' '}/{' '}
-                        <Link href="/articles"><a className={utilStyles.contentLink}>Articles</a></Link>
+                        <Link href="/blog"><a className={utilStyles.contentLink}>Articles</a></Link>
                         {' '}/{' '}
                         <span>{title}</span>
                     </nav>
@@ -100,7 +100,7 @@ export default function Post ({
 
                 <div className={utilStyles.contentContainer}>
                     <div className="max-w-2xl mx-auto mt-4 sm:mt-6 md:mt-8 text-right">
-                        <Link href="/articles"><a className={utilStyles.contentLink}>← All Articles</a></Link>
+                        <Link href="/blog"><a className={utilStyles.contentLink}>← All Articles</a></Link>
                     </div>
                 </div>
             </>

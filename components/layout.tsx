@@ -6,9 +6,8 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import utilStyles from '../styles/utils.module.css';
 
 const navigation = [
-    { name: 'Blog', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'Blog', href: '/blog' },
+    { name: 'About', href: '/about' }
 ];
 
 export const siteTitle = 'wooo.ch';
@@ -62,10 +61,15 @@ export default function Layout ({ children }: {
                                     </div>
                                     <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                                         {navigation.map((item) => (
-                                            <a key={item.name} href={item.href} className="font-medium text-white hover:text-gray-300">
-                                                {item.name}
-                                            </a>
+                                            <Link key={item.name} href={item.href} >
+                                                <a className="font-medium text-white hover:text-gray-300">
+                                                    {item.name}
+                                                </a>
+                                            </Link>
                                         ))}
+                                        <a key='contact' href="https://www.instagram.com/thetravelsofhornair" className="font-medium text-white hover:text-gray-300">
+                                            Contact
+                                        </a>
                                     </div>
                                 </nav>
                             </div>
