@@ -1,11 +1,11 @@
-import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import Layout from '../components/layout';
+import { getAllPostIds, getPostData } from '../lib/posts';
 import Head from 'next/head';
-import Date from '../../components/date';
+import Date from '../components/date';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import React from 'react';
 import Link from 'next/link';
-import utilStyles from '../../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.css';
 import Image from 'next/image';
 
 export default function Post ({

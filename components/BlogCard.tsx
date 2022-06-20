@@ -30,7 +30,7 @@ export default function BlogCard ({
                 <p className="text-sm font-medium text-orange-600">
                     <span>{tags}</span>
                 </p>
-                <Link href={`/posts/${id}`} className="block mt-2">
+                <Link href={`/${id}`} className="block mt-2">
                     <a>
                         <p className="text-xl font-semibold text-gray-900">{title}</p>
                         <p className="mt-3 text-base text-gray-500">{description}</p>
