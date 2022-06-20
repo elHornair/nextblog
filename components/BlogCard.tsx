@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Date from './date';
 import Image from 'next/image';
+import utilStyles from '../styles/utils.module.css';
 
 export default function BlogCard ({
     id,
@@ -52,7 +53,7 @@ export default function BlogCard ({
                 <div className="ml-3">
                     <p className="text-sm font-medium text-gray-900">
                         <Link href={'/about'}>
-                            <a className="hover:underline">Alain</a>
+                            <a className={utilStyles.contentLink}>Alain</a>
                         </Link>
                     </p>
                     <div className="flex space-x-1 text-sm text-gray-500">

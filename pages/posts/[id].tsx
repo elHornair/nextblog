@@ -5,37 +5,103 @@ import Date from '../../components/date';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import React from 'react';
 import Link from 'next/link';
+import utilStyles from '../../styles/utils.module.css';
+import Image from 'next/image';
 
 export default function Post ({
-    postData
-}: {
     postData: {
-        title: string
-        date: string
-        contentHtml: string
-        description: string
+        id,
+        title,
+        description,
+        imageUrl,
+        imageAlt,
+        date,
+        tags,
+        contentHtml
     }
 }) {
     return (
         <Layout>
             <Head>
-                <title>{postData.title}</title>
+                <title>{title}</title>
                 <meta
                     name="description"
-                    content={postData.description}
+                    content={description}
                     key="desc"
                 />
             </Head>
-            <article>
-                <h1>{postData.title}</h1>
-                <div>
-                    <Date dateString={postData.date} />
+            <>
+                <div className={utilStyles.contentContainer}>
+                    <nav className="mt-4 mb-8 sm:mt-6 sm:mb-12 md:mt-8 md:mb-16">
+                        <Link href="/"><a className={utilStyles.contentLink}>Home</a></Link>
+                        {' '}/{' '}
+                        <Link href="/articles"><a className={utilStyles.contentLink}>Articles</a></Link>
+                        {' '}/{' '}
+                        <span>{title}</span>
+                    </nav>
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-            </article>
-            <Link href="/">
-                <a>← Back to home</a>
-            </Link>
+                <article>
+                    <div className={utilStyles.contentContainer}>
+                        <div className="max-w-2xl mx-auto">
+                            <h1
+                                className="
+                                text-4xl
+                                tracking-tight
+                                font-extrabold
+                                text-gray-900
+                                sm:text-5xl
+                                md:text-6xl
+                            "
+                            >
+                                <span className="block xl:inline">{title}</span>
+                                <span className="block text-orange-600 xl:inline">{title}</span>
+                            </h1>
+                            <p
+                                className="
+                                mt-3
+                                text-base text-gray-600
+                                sm:mt-5 sm:text-lg sm:mx-auto
+                                md:text-xl
+                                lg:mx-0
+                            "
+                            >
+                                {description}
+                            </p>
+                            <p
+                                className="
+                                mt-3
+                                mb-4
+                                text-sm text-gray-600
+                                sm:mt-5 sm:mb-6 sm:text-base
+                                lg:mx-0
+                            "
+                            >
+                                <Date dateString={date} />
+                            </p>
+                        </div>
+                    </div>
+
+                    <Image
+                        src={imageUrl}
+                        layout="responsive"
+                        width={7200}// TODO: adapt image ratio so it's what the layout actually expects (wide). Then always cut the original images correctly.
+                        height={4800}
+                        alt={imageAlt}
+                    />
+                    <div className={utilStyles.contentContainer}>
+                        <div
+                            className="prose md:prose-md lg:prose-lg mt-10 sm:mt-18 max-w-2xl mx-auto"
+                            dangerouslySetInnerHTML={{ __html: contentHtml }}
+                        />
+                    </div>
+                </article>
+
+                <div className={utilStyles.contentContainer}>
+                    <div className="max-w-2xl mx-auto mt-4 sm:mt-6 md:mt-8 text-right">
+                        <Link href="/articles"><a className={utilStyles.contentLink}>← All Articles</a></Link>
+                    </div>
+                </div>
+            </>
         </Layout>
     );
 }

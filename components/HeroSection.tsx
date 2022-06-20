@@ -5,7 +5,7 @@ import React from 'react';
 export default function HeroSection () {
     return <section className="relative bg-gray-800">
         <div className={utilStyles.contentContainer}>
-            <div className="pt-1 pb-10 px-4 sm:px-6 lg:w-1/2 lg:mx-0 lg:pt-20 lg:px-8 lg:pr-20 xl:pt-28">
+            <div className="pt-1 pb-10 lg:w-1/2 lg:mx-0 lg:pt-20 lg:pr-20 xl:pt-28">
                 <div className="sm:text-center lg:text-left">
                     <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
                         <span className="sm:block">Instead, let&apos;s go</span>{' '}

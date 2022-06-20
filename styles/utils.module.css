@@ -1,4 +1,18 @@
 .contentContainer {
+    @apply relative;
     @apply max-w-7xl;
     @apply mx-auto;
+
+    @apply px-4;
+    @apply sm:px-6;
+    @apply lg:px-8;
+}
+
+.contentLink {
+    @apply inline-block;
+    @apply pb-1;
+    @apply text-orange-600;
+    @apply text-base;
+    @apply font-medium;
+    @apply hover:underline;
 }
