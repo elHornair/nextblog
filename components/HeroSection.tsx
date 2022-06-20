@@ -1,4 +1,4 @@
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.scss';
 import Image from 'next/image';
 import React from 'react';
 

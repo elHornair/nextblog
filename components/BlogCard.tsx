@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Date from './date';
 import Image from 'next/image';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.scss';
 
 export default function BlogCard ({
     id,
@@ -15,12 +15,12 @@ export default function BlogCard ({
 }) {
     return <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div className="flex-shrink-0">
-            <div className="relative h-48 w-full object-cover overflow-hidden">
+            <div className="relative h-56 w-full object-cover overflow-hidden">
                 <Image
                     src={imageUrl}
                     layout="responsive"
-                    width={7200}// TODO: adapt image ratio so it's what the layout actually expects (wide). Then always cut the original images correctly.
-                    height={4800}
+                    width={4032}
+                    height={2268}
                     alt={imageAlt}
                 />
             </div>

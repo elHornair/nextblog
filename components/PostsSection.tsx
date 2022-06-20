@@ -1,6 +1,6 @@
 import BlogCard from './BlogCard';
 import React from 'react';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.scss';
 
 export default function PostsSection ({ allPosts }) {
     return (

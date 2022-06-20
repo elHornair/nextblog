@@ -5,7 +5,7 @@ import Date from '../components/date';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import React from 'react';
 import Link from 'next/link';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.scss';
 import Image from 'next/image';
 
 export default function Post ({
@@ -83,13 +83,19 @@ export default function Post ({
                         </div>
                     </div>
 
-                    <Image
-                        src={imageUrl}
-                        layout="responsive"
-                        width={7200}// TODO: adapt image ratio so it's what the layout actually expects (wide). Then always cut the original images correctly.
-                        height={4800}
-                        alt={imageAlt}
-                    />
+                    <div className={utilStyles.panoramaPic}>
+                        <div className={utilStyles.panoramaPicInner}>
+                            <Image
+                                priority
+                                src={imageUrl}
+                                layout="responsive"
+                                width={4032}
+                                height={2268}
+                                alt={imageAlt}
+                            />
+                        </div>
+                    </div>
+
                     <div className={utilStyles.contentContainer}>
                         <div
                             className="prose md:prose-md lg:prose-lg mt-10 sm:mt-18 max-w-2xl mx-auto"

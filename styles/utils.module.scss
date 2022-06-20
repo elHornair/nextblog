@@ -1,0 +1,36 @@
+.contentContainer {
+    @apply relative;
+    @apply max-w-7xl;
+    @apply mx-auto;
+    @apply px-4;
+    @apply sm:px-6;
+    @apply lg:px-8;
+}
+
+.contentLink {
+    @apply inline-block;
+    @apply pb-1;
+    @apply text-orange-600;
+    @apply text-base;
+    @apply font-medium;
+    @apply hover:underline;
+}
+
+.panoramaPic {
+    @apply relative;
+    @apply overflow-hidden;
+
+    // TODO: use 'screen' mixin as described here: https://tailwindcss.com/docs/functions-and-directives
+    @media (min-width: 1024px) {
+        @apply mx-auto;
+        height: 36rem;
+        max-width: 160rem;
+    }
+}
+
+.panoramaPicInner {
+    @media (min-width: 1024px) {
+        @apply relative;
+        @apply -translate-y-1/4;
+    }
+}
