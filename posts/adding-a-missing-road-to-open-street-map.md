@@ -37,7 +37,7 @@ you don't have to fall back to Hansel's strategy: there are many smartphone apps
 
 ## Adding a missing road to OpenStreetMap
 
-A couple of days later I found myself in a „nice“ hotel with a „fast“ internet connection. Time to actually contribute
+A couple of days later I found myself in a ~~nice~~ hotel with a ~~fast~~ internet connection. Time to actually contribute
 my newfound road to OpenStreetMap. For this, I went to the
 OpenStreetMap website
 and [created an account](https://www.openstreetmap.org/user/new). Then I logged into my freshly created OpenStreetMap account, navigated to the
