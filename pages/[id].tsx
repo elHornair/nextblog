@@ -106,7 +106,7 @@ export default function Post ({
                 </article>
 
                 <div className={utilStyles.contentContainer}>
-                    <div className="max-w-2xl mx-auto mt-10 sm:mt-18 lg:mt-24 text-right">
+                    <div className="max-w-2xl mx-auto pt-10 pb-20 sm:py-20 lg:py-24 text-right">
                         <Link href="/"><a className={utilStyles.contentLink}>← See all Articles</a></Link>
                     </div>
                 </div>

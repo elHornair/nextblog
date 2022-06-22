@@ -32,7 +32,7 @@ export default function Layout ({ children }: {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-            <div className="relative min-w-full z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <div className="relative min-w-full z-10 lg:max-w-2xl lg:w-full">
                 <header className="bg-gray-800">
                     <div className={utilStyles.contentContainer}>
                         <Popover>
