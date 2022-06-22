@@ -1,37 +1,13 @@
 ---
-title1: 'Contributing to' title2: 'OpenStreetMap' date: '2022-06-01' description: 'I recently made my first contribution
-to OpenStreetMap. Everyone can do it and it greatly helps the community.' tags: 'tools' imageAlt: 'An antique map of
-light yellow colour, with map information written in English'
+title1: 'Contributing to'
+title2: 'OpenStreetMap'
+date: '2022-06-01'
+description: 'I recently made my first contribution to OpenStreetMap. I documented my learnings here, so you can do it too!'
+tags: 'tools'
+imageAlt: 'A white map with a hand putting red pins into it'
 ---
 
-## What is OpenStreetMap?
-
-If you ever went on a longer bicycle trip, you probably used a navigation app like
-[Maps.me](https://maps.me/),
-[Komoot](https://www.komoot.com/) or
-[MapOut](https://mapout.app/)
-to plan your route and find your way in unknown territory. These apps are magical! They know:
-
-* If there is a road between town A and B
-* Every curve and incline the road has
-* If the road is paved, unpaved, rideable by bicycle
-* How long it takes you to ride from A to B
-* That there is a bakery waiting for your in town B, selling delicious croissants, so you can fill your stomach that is
-  empty from your ride
-
-How do they know all of this? The truth is, that sadly there is no magic involved. These apps get all this information
-out of a huge database called [OpenStreetMap](https://www.openstreetmap.org/). What's special about OpenStreetMap is
-that it's a free and collaborative project. That means that the aforementioned information is gathered by people like
-you and me and put into the database. Then everyone can use that data for free. Magical!
-
-This is very different from the commercial mapping services of
-[Apple](https://www.apple.com/maps/) and [Google](https://www.google.com/maps), which are based on their own proprietary
-data. These companies gather (and sometimes buy) the mapping data themselves. We are not allowed to use the data without
-their permission.
-
-## Contributing to OpenStreetMap
-
-### Somewhere in the Mexican jungle
+## Somewhere in the Mexican jungle
 
 I recently found myself cycling in a pretty remote area of Southern Mexico. From some locals in
 [Santiago Tutla](https://www.openstreetmap.org/#map=16/17.1938/-95.3735) I've learned, that there is an unpaved road
@@ -42,7 +18,7 @@ knew that I found an opportunity to enhance the OpenStreetMap database. Great! A
 that my bike computer (a [Wahoo Elemnt Bolt](https://www.wahoofitness.com/devices/bike-computers/elemnt-bolt))
 was running and headed off, following the mysterious jungle road.
 
-### Hansel and Gretel and the satellites
+## Hansel, Gretel and the satellites
 
 Do you remember what Hansel did in the famous fairy tale
 [Hansel and Gretel](https://en.wikipedia.org/wiki/Hansel_and_Gretel)? Led to an unknown location in the woods, he
@@ -55,7 +31,7 @@ made, by combining all the individual data points: the GPS trace. While using qu
 advantage over Hansel's strategy: GPS traces don't get eaten by birds. If you don't have a dedicated bike computer,
 don't worry: there are many apps for smartphones, that can generate GPS tracks.
 
-### Adding a missing road to OpenStreetMaps
+## Adding a missing road to OpenStreetMaps
 
 A couple of days later I found myself in a „nice“ hotel with a „fast“ internet connection. Time to actually contribute
 my newfound road to OpenStreetMap. For this, I went to the
@@ -88,13 +64,13 @@ corrections, added some metadata and saved
 [the changeset](https://www.openstreetmap.org/changeset/121741823#map=13/17.1282/-95.3615). Tadaaa: there is now
 [a road](https://www.openstreetmap.org/#map=13/17.1282/-95.3615) between Santiago Tutla and San Juan Mazatlán.
 
-### Other ways to contribute
+## Other ways to contribute
 
 There are simpler ways to contribute to OpenStreetMap than adding a before unknown road. You could also correct the type
 of a street (for example if an old road recently got paved), add a new restaurant, correct a road or review an existing
 changeset (for example [mine](https://www.openstreetmap.org/changeset/121741823#map=13/17.1282/-95.3615)).
 
-### Recap
+## Summary
 
 So as a recap, these were the steps I took to make my first OpenStreetMap contribution:
 
