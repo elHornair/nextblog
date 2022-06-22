@@ -44,8 +44,21 @@ export default function Post ({
                 {/*    </nav> */}
                 {/* </div> */}
                 <article>
+                    <div className={utilStyles.panoramaPic}>
+                        <div className={utilStyles.panoramaPicInner}>
+                            <Image
+                                priority
+                                src={imageUrl}
+                                layout="responsive"
+                                width={4032}
+                                height={2268}
+                                alt={imageAlt}
+                            />
+                        </div>
+                    </div>
+
                     <div className={utilStyles.contentContainer}>
-                        <div className="max-w-2xl mx-auto">
+                        <div className="max-w-2xl mx-auto mt-10 sm:mt-18 lg:mt-24">
                             <h1
                                 className="
                                 text-4xl
@@ -84,29 +97,16 @@ export default function Post ({
                         </div>
                     </div>
 
-                    <div className={utilStyles.panoramaPic}>
-                        <div className={utilStyles.panoramaPicInner}>
-                            <Image
-                                priority
-                                src={imageUrl}
-                                layout="responsive"
-                                width={4032}
-                                height={2268}
-                                alt={imageAlt}
-                            />
-                        </div>
-                    </div>
-
                     <div className={utilStyles.contentContainer}>
                         <div
-                            className="prose md:prose-md lg:prose-lg mt-10 sm:mt-18 max-w-2xl mx-auto"
+                            className="prose md:prose-md lg:prose-lg max-w-2xl mx-auto mt-10 sm:mt-18 lg:mt-20"
                             dangerouslySetInnerHTML={{ __html: contentHtml }}
                         />
                     </div>
                 </article>
 
                 <div className={utilStyles.contentContainer}>
-                    <div className="max-w-2xl mx-auto mt-4 sm:mt-6 md:mt-8 text-right">
+                    <div className="max-w-2xl mx-auto mt-10 sm:mt-18 lg:mt-24 text-right">
                         <Link href="/blog"><a className={utilStyles.contentLink}>← All Articles</a></Link>
                     </div>
                 </div>
