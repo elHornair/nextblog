@@ -1,8 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeSanitize from 'rehype-sanitize';
+import rehypeStringify from 'rehype-stringify';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -49,21 +54,27 @@ export function getAllPostIds () {
     });
 }
 
+async function markdownToHtml (markdown) {
+    const processedContentHtml = await unified()
+        .use(remarkParse)
+        .use(remarkFrontmatter)
+        .use(remarkGfm)
+        .use(remarkRehype)
+        .use(rehypeSanitize)
+        .use(rehypeStringify)
+        .process(markdown);
+
+    return String(processedContentHtml);
+}
+
 // TODO: refactor this, so it shares the common code with getSortedPostsData() (helper function that turns a path into a blog info object
 export async function getPostData (id: string) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    const contentHtml = await markdownToHtml(fileContents);
 
-    // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
-    const contentHtml = processedContent.toString();
-
-    // Combine the data with the id and contentHtml
     return {
         id,
         contentHtml,
