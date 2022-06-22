@@ -6,7 +6,6 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import utilStyles from '../styles/utils.module.scss';
 
 const navigation = [
-    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' }
 ];
 

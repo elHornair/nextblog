@@ -33,15 +33,16 @@ export default function Post ({
                 />
             </Head>
             <>
-                <div className={utilStyles.contentContainer}>
-                    <nav className="mt-4 mb-8 sm:mt-6 sm:mb-12 md:mt-8 md:mb-16">
-                        <Link href="/"><a className={utilStyles.contentLink}>Home</a></Link>
-                        {' '}/{' '}
-                        <Link href="/blog"><a className={utilStyles.contentLink}>Articles</a></Link>
-                        {' '}/{' '}
-                        <span>{title}</span>
-                    </nav>
-                </div>
+                {/* TODO: activate breadcrumb again, once there is a /blog page - Without it, it's a bit pointless */}
+                {/* <div className={utilStyles.contentContainer}> */}
+                {/*    <nav className="mt-4 mb-8 sm:mt-6 sm:mb-12 md:mt-8 md:mb-16"> */}
+                {/*        <Link href="/"><a className={utilStyles.contentLink}>Home</a></Link> */}
+                {/*        {' '}/{' '} */}
+                {/*        <Link href="/blog"><a className={utilStyles.contentLink}>Blog</a></Link> */}
+                {/*        {' '}/{' '} */}
+                {/*        <span>{title}</span> */}
+                {/*    </nav> */}
+                {/* </div> */}
                 <article>
                     <div className={utilStyles.contentContainer}>
                         <div className="max-w-2xl mx-auto">
