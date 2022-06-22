@@ -32,4 +32,4 @@ their permission.
 I personally find it remarkable that a collaborative project can keep up with the respective products of some of the
 biggest companies in the world. But it goes without saying, that this is only possible, because a lot of people put in
 a lot of free work to keep it running. After years of using OpenStreetMap, I've recently made my first contribution
-to it. I've [documented my learnings](/contributing-to-open-street-map), so you can do it too!
+to it. I've [documented my learnings](/adding-a-missing-road-to-open-street-map), so you can do it too!
