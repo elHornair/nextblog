@@ -3,7 +3,7 @@ title1: 'Contributing to'
 title2: 'OpenStreetMap'
 date: '2022-06-01'
 description: 'I recently made my first contribution to OpenStreetMap. I documented my learnings here, so you can do it too!'
-tags: 'tools'
+tags: 'tools, mexico'
 imageAlt: 'A white map with a hand putting red pins into it'
 ---
 
