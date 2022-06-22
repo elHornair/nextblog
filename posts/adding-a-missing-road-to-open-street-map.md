@@ -18,6 +18,8 @@ knew that I found a perfect opportunity to enhance the OpenStreetMap database. G
 that my [bike computer](https://www.wahoofitness.com/devices/bike-computers/elemnt-bolt)
 was running and headed off, following the mysterious jungle road.
 
+![Panoramic view showing mountains covered by tropical trees](/images/adding-a-missing-road-to-open-street-map/jungle-road.jpg "On the way from Santiago Tutla to San Juan Mazatlán")
+
 ## Hansel, Gretel and the satellites
 
 Do you remember what Hansel did in the famous fairy tale
@@ -31,7 +33,9 @@ made, by combining all the individual data points: the GPS trace. While using qu
 advantage over Hansel's strategy: GPS traces don't get eaten by birds. But even if you don't have a dedicated bike computer,
 you don't have to fall back to Hansel's strategy: there are many smartphone apps for generating GPS tracks too.
 
-## Adding a missing road to OpenStreetMaps
+![A GPS satellite orbiting around earth](/images/adding-a-missing-road-to-open-street-map/satellite.jpg "A GPS satellite")
+
+## Adding a missing road to OpenStreetMap
 
 A couple of days later I found myself in a „nice“ hotel with a „fast“ internet connection. Time to actually contribute
 my newfound road to OpenStreetMap. For this, I went to the
@@ -42,6 +46,8 @@ and [created an account](https://www.openstreetmap.org/user/new). Then I logged 
 [GPX file](https://en.wikipedia.org/wiki/GPS_Exchange_Format). The GPX file contains the recorded GPS trace for the
 route that is to be added. I downloaded this file from my bike computer, added it to OpenStreetMap form and clicked on
 „Upload“. You can see the result of this endeavor [here](https://www.openstreetmap.org/user/elHornair/traces/4405855).
+
+![Web interface with input forms](/images/adding-a-missing-road-to-open-street-map/osm-upload-gps-trace.png "Adding a GPS trace in OpenStreetMap")
 
 At first, I thought that I was already done. But it turns out that adding the GPX file to the database is not the same
 as adding a road to the map. To add a road, I needed a map editor. Luckily, OpenStreetMap conveniently provides
@@ -64,6 +70,8 @@ corrections, added some metadata and saved
 [the changeset](https://www.openstreetmap.org/changeset/121741823#map=13/17.1282/-95.3615). Tadaaa: there is now
 [a road](https://www.openstreetmap.org/#map=13/17.1282/-95.3615) between Santiago Tutla and San Juan Mazatlán.
 
+![Web interface showing a map with a road](/images/adding-a-missing-road-to-open-street-map/osm-changeset.png "The newly added road on OpenStreetMap")
+
 ## Other ways to contribute
 
 There are simpler ways to contribute to OpenStreetMap than adding a before unknown road. You could also correct the type
@@ -78,4 +86,3 @@ As a recap, these were the steps I took to add my first road to OpenStreetMap:
 2. Created an OpenStreetMap account
 3. Uploaded a GPX file containing my GPS trace to the OpenStreetMap database
 4. Added the road with the OpenStreetMap editor by manually drawing a route along the GPS trace
-

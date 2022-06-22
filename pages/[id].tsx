@@ -7,6 +7,7 @@ import React from 'react';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.scss';
 import Image from 'next/image';
+import * as util from 'util';
 
 export default function Post ({
     postData: {

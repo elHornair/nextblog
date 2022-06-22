@@ -24,6 +24,8 @@ out of a huge database called [OpenStreetMap](https://www.openstreetmap.org/). W
 that it's a free and collaborative project. That means that the aforementioned information is gathered by people like
 you and me and put into the database. Then everyone can use that data for free.
 
+![Web interface with cycling route plotted on a map](/images/what-is-open-street-map/komoot-screenshot.png "The popular cycling application Komoot uses OpenStreetMap data")
+
 This is very different from the commercial mapping services of
 [Apple](https://www.apple.com/maps/) and [Google](https://www.google.com/maps), which are based on their own proprietary
 data. These companies gather (and buy) the mapping data themselves. We are not allowed to use the data without
