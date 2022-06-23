@@ -3,11 +3,13 @@ import path from 'path';
 import matter from 'gray-matter';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
+import remarkDirective from 'remark-directive';
 import remarkRehype from 'remark-rehype';
-import rehypeSanitize from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
+import rehypeFormat from 'rehype-format';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
+import { visit } from 'unist-util-visit';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -59,12 +61,58 @@ async function markdownToHtml (markdown) {
         .use(remarkParse)
         .use(remarkFrontmatter)
         .use(remarkGfm)
-        .use(remarkRehype)
-        .use(rehypeSanitize)
+        .use(remarkDirective)
+        .use(remarkImageCaptionPlugin)
+        .use(remarkRehype)// TODO: make TS happy
+        .use(rehypeFormat)
         .use(rehypeStringify)
         .process(markdown);
 
     return String(processedContentHtml);
+}
+
+function replaceElement (source, target) {
+    for (const property in source) {
+        delete source[property];
+    }
+
+    Object.assign(source, target);
+}
+
+function remarkImageCaptionPlugin () {
+    return (tree, file) => {
+        visit(tree, (node) => {
+            if (
+                node.type === 'image'
+            ) {
+                const originalImageNode = { ...node };
+                const figureElement = {
+                    type: 'element',
+                    data: { hName: 'figure' },
+                    children: [
+                        {
+                            type: 'element',
+                            data: {
+                                hName: 'img',
+                                hProperties: {
+                                    src: originalImageNode.url,
+                                    alt: originalImageNode.alt,
+                                    title: originalImageNode.title
+                                }
+                            }
+                        },
+                        {
+                            type: 'element',
+                            data: { hName: 'figcaption' },
+                            children: [{ type: 'text', value: originalImageNode.title }]
+                        }
+                    ]
+                };
+
+                replaceElement(node, figureElement);
+            }
+        });
+    };
 }
 
 // TODO: refactor this, so it shares the common code with getSortedPostsData() (helper function that turns a path into a blog info object
